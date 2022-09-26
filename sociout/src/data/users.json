@@ -1,0 +1,5 @@
+[  
+    {"id":1,"name":"Shyam", "email":"shyamjaiswal@gmail.com","password":"Password@123","profile_picture":"https://picsum.photos/200/300?random=1"},  
+    {"id":2,"name":"Bob", "email":"bob32@gmail.com","password":"Password@123","profile_picture":"https://picsum.photos/200/300?random=1"},  
+    {"id":3,"name":"Jai", "email":"jai87@gmail.com","password":"Password@123","profile_picture":"https://picsum.photos/200/300?random=1"}
+]
