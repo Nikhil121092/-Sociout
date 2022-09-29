@@ -1,48 +1,62 @@
 import React from "react";
-//import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
-import VideoCameraBackOutlinedIcon from '@mui/icons-material/VideoCameraBackOutlined';
-import AddToPhotosOutlinedIcon from '@mui/icons-material/AddToPhotosOutlined';
-import EmojiEmotionsOutlinedIcon from '@mui/icons-material/EmojiEmotionsOutlined';
+import { Avatar } from "@mui/material";
 import "../mainContent.css";
+import axios from "axios";
+import { useState } from "react";
 
-//const MainContent = (_props) => {
-  
-  function MainContent() {
-    const handlesubmit = (e) => {
-        e.preventDefault();
-    };
+function MainContent() {
+  const [content, setContent] = useState(0);
 
-    return (
-        <div className="MainContent">
-            <div className="MainContent_top" >
-                <form>
-                  <img className="img" src="img_avatar.png" alt="Avatar"></img> 
-                    < input 
-                      className="MainContent_input" 
-                      placeholder="What's happening?"/>
-                </form>
-            </div>
-            <div className="MainContent_bottom">
-              <div className="MainContent_options">
-                < VideoCameraBackOutlinedIcon style={{color:'bdbdbd',padding:'4px'}} />
-                <h6>Live Video</h6>
-              </div>  
-              <div className="MainContent_options">
-                < AddToPhotosOutlinedIcon style={{color:'bdbdbd',padding:'4px'}} />
-                <h6>Photo/Video</h6>
-              </div>  
-              <div className="MainContent_options">
-                < EmojiEmotionsOutlinedIcon style={{color:'bdbdbd',padding:'4px'}} /> 
-                <h6>Feeling</h6>
-              </div> 
-              <div>
-              <button className = "button" onclick = {handlesubmit} type="submit" > Post </button>
-              
-              </div>
-            </div>
+  const handlesubmit = (e) => {
+    e.preventDefault();
+    (async () => {
+      await axios
+        .post("https://jsonplaceholder.typicode.com/posts", {
+          userId: 12,
+          title: "Indumathy's Post",
+          body: content,
+        })
+        .then(function (response) {
+          alert("Successful");
+          console.log(response.data);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    })();
+  };
+
+  const handleChange = (e) => {
+    setContent(e.target.value);
+  };
+
+  return (
+    <div className="MainContent">
+      <div className="MainContent_top">
+        <form>
+          <Avatar
+            sx={{ width: 30, height: 30 }}
+            src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          >
+            {" "}
+          </Avatar>
+          <input
+            onChange={handleChange}
+            className="MainContent_input"
+            placeholder="What's happening?"
+          />
+        </form>
+      </div>
+      <div className="MainContent_bottom">
+        <div alignItems="right">
+          <button className="button" onClick={handlesubmit} type="submit">
+            {" "}
+            Post{" "}
+          </button>
         </div>
-    )
-    
-  };   
+      </div>
+    </div>
+  );
+}
 
 export default MainContent;
