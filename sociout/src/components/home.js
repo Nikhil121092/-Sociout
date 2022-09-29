@@ -2,10 +2,11 @@ import React from "react";
 import Header from "./common/header";
 import LeftSideBar from "./common/leftSidebar";
 import RightSideBar from "./common/rightSidebar";
-import MianContent from "./common/mainContent";
+import MainContent from "./common/mainContent";
+import "./mainContent.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
+//import Container from "react-bootstrap/Container";
 
 const Home = (props) => {
   return (
@@ -16,7 +17,7 @@ const Home = (props) => {
           <LeftSideBar />
         </Col>
         <Col xs={8}>
-          <MianContent />
+          <MainContent />
         </Col>
         <Col>
           <RightSideBar />

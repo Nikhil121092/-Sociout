@@ -1,5 +1,49 @@
-const MianContent = (props) => {
-  return "MianContent";
-};
+import React from "react";
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import VideoCameraBackOutlinedIcon from '@mui/icons-material/VideoCameraBackOutlined';
+import AddToPhotosOutlinedIcon from '@mui/icons-material/AddToPhotosOutlined';
+import EmojiEmotionsOutlinedIcon from '@mui/icons-material/EmojiEmotionsOutlined';
+import "../mainContent.css";
 
-export default MianContent;
+//const MainContent = (_props) => {
+  
+  function MainContent() {
+    const handlesubmit = (e) => {
+        e.preventDefault();
+    };
+
+    return (
+        <div className="MainContent">
+            <div className="MainContent_top" >
+                <form>
+                <AccountCircleOutlinedIcon/> 
+                    < input 
+                      className="MainContent_input" 
+                      placeholder="What's on your mind?"/>
+                   
+                </form>
+            </div>
+            <div className="MainContent_bottom">
+              <div className="MainContent_options">
+                < VideoCameraBackOutlinedIcon style={{color:'bdbdbd'}} />
+                <h6>Live video</h6>
+              </div>  
+              <div className="MainContent_options">
+                < AddToPhotosOutlinedIcon style={{color:'bdbdbd'}} />
+                <h6>Photos</h6>
+              </div>  
+              <div className="MainContent_options">
+                < EmojiEmotionsOutlinedIcon style={{color:'bdbdbd'}} /> 
+                <h6>Feeling</h6>
+              </div> 
+              <div>
+              <button className = "button" onclick = {handlesubmit} type="submit" > Post </button>
+              
+              </div>
+            </div>
+        </div>
+    )
+    
+  };   
+
+export default MainContent;

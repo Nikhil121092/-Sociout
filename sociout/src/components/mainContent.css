@@ -1,0 +1,52 @@
+.MainContent{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    width:80%;
+}
+
+.MainContent_top{
+    display: flex;
+    justify-items:center;
+    flex-direction: column;
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom: 15px;
+    padding: 15px;
+}
+.MainContent_top>form{
+    flex:1;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.MainContent_top>form>input{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    border: none;
+    padding: 5px 20px;
+    margin: 0 20px;
+    border-radius: 999px;
+    background-color: #eff2f5;
+
+}
+.MainContent_bottom{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+    margin:5Px;
+}
+
+.MainContent_options{
+    display: flex;
+    padding: 2px;
+}
+
+.button{
+    background-color: dodgerblue;
+    outline: auto;
+
+}
