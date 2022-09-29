@@ -37,16 +37,25 @@
     display: flex;
     justify-content: space-evenly;
     padding: 5px;
-    margin:5Px;
+    margin: 5Px;
+    align-content: flex-end;
+    align-items: center;
 }
 
 .MainContent_options{
     display: flex;
-    padding: 2px;
+    padding:10px;
 }
 
 .button{
     background-color: dodgerblue;
-    outline: auto;
-
+    border: none;
+    border-radius: 10px;
+    width:75px;
+    text-align: center;
+    color:aliceblue;
+    padding: 3px;
+}
+.img{
+   border-radius: 50%;
 }

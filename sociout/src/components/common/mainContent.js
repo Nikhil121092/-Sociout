@@ -1,5 +1,5 @@
 import React from "react";
-import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+//import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import VideoCameraBackOutlinedIcon from '@mui/icons-material/VideoCameraBackOutlined';
 import AddToPhotosOutlinedIcon from '@mui/icons-material/AddToPhotosOutlined';
 import EmojiEmotionsOutlinedIcon from '@mui/icons-material/EmojiEmotionsOutlined';
@@ -16,24 +16,23 @@ import "../mainContent.css";
         <div className="MainContent">
             <div className="MainContent_top" >
                 <form>
-                <AccountCircleOutlinedIcon/> 
+                  <img className="img" src="img_avatar.png" alt="Avatar"></img> 
                     < input 
                       className="MainContent_input" 
-                      placeholder="What's on your mind?"/>
-                   
+                      placeholder="What's happening?"/>
                 </form>
             </div>
             <div className="MainContent_bottom">
               <div className="MainContent_options">
-                < VideoCameraBackOutlinedIcon style={{color:'bdbdbd'}} />
-                <h6>Live video</h6>
+                < VideoCameraBackOutlinedIcon style={{color:'bdbdbd',padding:'4px'}} />
+                <h6>Live Video</h6>
               </div>  
               <div className="MainContent_options">
-                < AddToPhotosOutlinedIcon style={{color:'bdbdbd'}} />
-                <h6>Photos</h6>
+                < AddToPhotosOutlinedIcon style={{color:'bdbdbd',padding:'4px'}} />
+                <h6>Photo/Video</h6>
               </div>  
               <div className="MainContent_options">
-                < EmojiEmotionsOutlinedIcon style={{color:'bdbdbd'}} /> 
+                < EmojiEmotionsOutlinedIcon style={{color:'bdbdbd',padding:'4px'}} /> 
                 <h6>Feeling</h6>
               </div> 
               <div>
